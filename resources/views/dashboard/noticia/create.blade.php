@@ -35,12 +35,14 @@
                     <label for="fecha_publicacion" class="form-label">Fecha de Publicacion</label>
 
                     <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" name="fecha_publicacion" id="fecha_publicacion" tabindex="4" value="{{old('fecha_publicacion')}}"/>
-                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        <input type="date" class="form-control datetimepicker-input" data-target="#reservationdate" data-mask name="fecha_publicacion" id="fecha_publicacion" tabindex="4" value="{{old('fecha_publicacion')}}" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy">
+                        <!-- <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div> -->
                     </div>
                    
                 </div>
+                
 
                 <div class="mb-3 {{$errors->has('categoria') ? 'has-error' : ''}}">
                     <label for="categoria">Categoría</label>
@@ -73,7 +75,7 @@
 
         </div>
         
-        <a href="/noticias" class="btn btn-secondary" tabindex="5">Canelar</a>
+        <a href="/noticias" class="btn btn-secondary" tabindex="5">Cancelar</a>
         <button type="submit" class="btn btn-primary" tabindex="6">Publicar</button>
 
     </form>
@@ -94,18 +96,22 @@
 @stop
 
 @section('js')
-    <!-- <script src="/js/jquery/jquery.min.js"></script> -->
-    <!-- date-range-picker -->
-    <script src="/js/daterangepicker.js"></script>
-    
-    <!-- Summernote -->
-    <script src="/js/summernote-bs4.min.js"></script>
-    
-    <!-- Select2 -->
-    <script src="/js/select2/js/select2.full.js"></script>
+<!-- <script src="/js/jquery.js"></script> -->
 
-    <!-- DropZone -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
+<!-- date-range-picker -->
+<script src="/js/daterangepicker.js"></script>
+
+<!-- Summernote -->
+<script src="/js/summernote-bs4.min.js"></script>
+
+<!-- Select2 -->
+<script src="/js/select2/js/select2.full.js"></script>
+
+<!-- DropZone -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/min/dropzone.min.js"></script>
+
+<script src="/js/inputmask/jquery.inputmask.min.js"></script>
+
 
     <script>
 
@@ -114,6 +120,9 @@ $(function () {
     $('#reservationdate').datetimepicker({
         format: 'L'
     });
+
+    //Datemask dd/mm/yyyy
+    $('#datemask').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
 
 });
 

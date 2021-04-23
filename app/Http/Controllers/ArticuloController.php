@@ -58,7 +58,7 @@ class ArticuloController extends Controller
             'imagen' => 'image|max:2048',
         ]);
     
-        $imagen = request()->file('imagen')->store('public/'.$request->titulo);
+        $imagen = request()->file('imagen')->store('public/articulos/'.$request->titulo);
 
         $articulo = Articulo::create([
             'codigo' => $request->get('codigo'),
@@ -128,7 +128,7 @@ class ArticuloController extends Controller
             // Se elimina la imagen del evento actual
             Storage::delete($articulo->file);
 
-            $imagen = request()->file('imagen')->store('public/'.$request->titulo);
+            $imagen = request()->file('imagen')->store('public/articulos/'.$request->titulo);
 
             // se actualiza el evento en la base da datos
             $articulo->update([

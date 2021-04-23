@@ -39,10 +39,10 @@
                             <label for="fecha_publicacion" class="form-label">Fecha de Publicacion</label>
 
                             <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" name="fecha_publicacion" id="fecha_publicacion" tabindex="4" value="{{old('fecha_publicacion',$noticia->fecha_publicacion ? $noticia->fecha_publicacion->format('d/m/y') : null )}}"/>
-                            <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                            <input type="date" class="form-control datetimepicker-input" data-target="#reservationdate" name="fecha_publicacion" id="fecha_publicacion" tabindex="4" value="{{old('fecha_publicacion',$noticia->fecha_publicacion ? $noticia->fecha_publicacion->format('d/m/y') : null )}}" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy">
+                            <!-- <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                             <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                            </div>
+                            </div> -->
                             
                         </div>
 
@@ -80,7 +80,7 @@
                     
                 </div>
                 
-                <a href="/noticias" class="btn btn-secondary" tabindex="5">Canelar</a>
+                <a href="/noticias" class="btn btn-secondary" tabindex="5">Cancelar</a>
                 <button  class="btn btn-primary" tabindex="6">Editar</button>
             </form>
        </div>  

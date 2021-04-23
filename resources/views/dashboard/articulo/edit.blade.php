@@ -40,6 +40,17 @@
             <input type="file" id="imagen" name="imagen" value="{{ old('imagen') }}" />
             {!! $errors->first('imagen', '<span class="alert-danger">:message</span>') !!}			
         </div>
+
+        <div class="row">
+        <div class="col-md-8">
+           
+            <div class="col-md-4">
+                <!-- <button class="btn btn-danger btn-sm" style="position:absolute"><i class="fas fas-remove"></i>x</button> -->
+                <img class="card-img-top img-responsive" src="{{url($articulo->imagen)}}" alt="">
+            </div>
+                    
+        </div>  
+    </div>
         
        
         <a href="/articulos" class="btn btn-secondary" tabindex="7">Cancelar</a>
