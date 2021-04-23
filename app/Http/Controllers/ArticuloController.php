@@ -8,6 +8,7 @@ use App\Models\Categoria;
 use Illuminate\Support\Facades\Storage;
 use App\Helpers\Currency;
 use App\Traits\ManageCart;
+use Intervention\Image\Facades\Image;
 
 class ArticuloController extends Controller
 {
@@ -57,7 +58,7 @@ class ArticuloController extends Controller
             'imagen' => 'image|max:2048',
         ]);
     
-        $imagen = request()->file('imagen')->store('public/articulos/'.$request->titulo);
+        $imagen = request()->file('imagen')->store('public/'.$request->titulo);
 
         $articulo = Articulo::create([
             'codigo' => $request->get('codigo'),
@@ -68,6 +69,15 @@ class ArticuloController extends Controller
             'precio' => $request->get('precio'),
             'imagen' => Storage::url($imagen),
             ]);
+        
+        // optimización de la imagen
+        $image = Image::make(Storage::get($imagen))
+                        ->widen(600)
+                        // ->limitColors(255)
+                        ->encode();
+
+        // se reemplaza la imagen que subio el usuario por la imagen optimizada
+        Storage::put($articulo->imagen, (string) $image);
 
 
         return redirect('/articulos');
@@ -121,7 +131,7 @@ class ArticuloController extends Controller
             $imagen = request()->file('imagen')->store('eventos/'.$request->title);
 
             // se actualiza el evento en la base da datos
-            $evento->update([
+            $articulo->update([
                 'codigo' => $request->get('codigo'),
                 'titulo' => $request->get('titulo'),
                 'subtitulo' => $request->get('subtitulo'),
@@ -131,6 +141,15 @@ class ArticuloController extends Controller
                 'imagen' => $imagen,
                 
              ]);
+
+            // optimización de la imagen
+            $image = Image::make(Storage::get($imagen))
+                                ->widen(600)
+                                // ->limitColors(255)
+                                ->encode();
+
+            // se reemplaza la imagen que subio el usuario por la imagen optimizada
+            Storage::put($articulo->imagen, (string) $image);
         }
 
         $articulo->codigo = $request->get('codigo');
@@ -155,9 +174,12 @@ class ArticuloController extends Controller
     {
         $articulo = Articulo::findOrfail($id);
 
-        Storage::delete($articulo->imagen);
+        $fotoRuta = str_replace('storage', 'public', $foto->url);
+
+        Storage::delete($fotoRuta);
 
         $articulo->delete();
+
 
         return redirect('/articulos');
     }

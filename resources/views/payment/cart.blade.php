@@ -59,8 +59,7 @@
 										<!-- <div class="cart-total-heading">Total</div> -->
 										<div class="cart-remove">&nbsp; Acciones</div>
 									</div>
-							@forelse($cart->getContent() as $articulo)
-
+							@foreach($cart->getContent() as $articulo)
 									<div class="cart-bar-list">
 
 									<div class="cart-product">
@@ -78,13 +77,10 @@
 									</div>
 
 									<hr>
-									{{$product = "$articulo->titulo $ $articulo->precio "}}
+									{{$product = "$articulo->titulo  $articulo->formatted_price"}}
 
-									@empty
-									<div class="empty-results">
-										{!! __("No tienes ningún artículo en el carrito") !!}
-									</div>
-								@endforelse	
+									
+								@endforeach
 								</div>
 							</div>	
 
@@ -135,7 +131,7 @@
 
 								<div class="cart-buttons">
 									<div class="pull-right">
-										<a class="ad-to-cart btn btn-default btn-rounded" href="https://api.whatsapp.com/send?phone=584126102882&text=*Productos:*%0D%0A{{$product}}%20*%0D%0A*Total:*%0D%0A{{$cart->totalAmount()}}">Enviar pedido al Whatsapp</a>
+										<a class="ad-to-cart btn btn-default btn-rounded" href="https://api.whatsapp.com/send?phone=584126102882&text=*Productos:*%0D%0A{{$articulo->titulo}}%20*%0D%0A*Total:*%0D%0A{{$cart->totalAmount()}}">Enviar pedido al Whatsapp</a>
 										<!-- <a class="ad-to-cart btn btn-default btn-rounded" href="https://api.whatsapp.com/send?phone=584126102882&text=*Productos:*%0D%0A{{$articulo->titulo}}%20*%0D%0A*Codigo:*%0D%0A{{$articulo->codigo}}%20*%0D%0A*Precio:*%0D%0A{{$articulo->precio}}%20*%0D%0A*Total:*%0D%0A{{$cart->totalAmount()}}">Enviar pedido al Whatsapp</a> -->
 
 									</div>

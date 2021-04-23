@@ -89,7 +89,7 @@
 									<div class="clearfix"></div>
 									</div>
 									<span class="sperator"></span>
-									<a href="{{route( 'add_articulo_to_cart', $articulo )}}" class="ad-to-cart"><i class="fa fa-shopping-cart"></i>add to cart</a>
+									<!-- <a href="{{route( 'add_articulo_to_cart', $articulo )}}" class="ad-to-cart"><i class="fa fa-shopping-cart"></i>add to cart</a> -->
 								</div>
 							@endforeach
 

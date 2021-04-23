@@ -10,6 +10,7 @@ use App\Models\Foto;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class NoticiaController extends Controller
 {
@@ -89,7 +90,7 @@ class NoticiaController extends Controller
             'url' => Storage::url($foto),
             'noticia_id' => $noticia->id
         ]);
-
+        
         return redirect('/noticias')->with('flash', 'Tu publicación ha sido creada');
     }
 

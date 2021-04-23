@@ -14,17 +14,7 @@
 
 						<h4><span>Uk Medi</span></h4>
 
-						<ul class="footer-nav list-unstyled clearfix">
-                            <li><a href="{{ url('/') }}"><i class="fa fa-long-arrow-right"></i>Inicio</a></li>
-                            <li><a href="{{ url('empresa') }}"><i class="fa fa-long-arrow-right"></i>Uk Medi</a></li>
-                            <li><a href="{{ url('medicinadeportiva') }}"><i class="fa fa-long-arrow-right"></i>Medicina deportiva</a></li>
-                            <li><a href="{{ url('protesis') }}"><i class="fa fa-long-arrow-right"></i>Protesis</a></li>
-                            <li><a href="{{ url('aloinjertos') }}"><i class="fa fa-long-arrow-right"></i>Aloinjertos</a></li>
-                            <li><a href="{{ url('blog') }}"><i class="fa fa-long-arrow-right"></i>Blog</a></li>
-                            <li><a href="{{ url('shop') }}"><i class="fa fa-long-arrow-right"></i>Shop</a></li>
-                            <li><a href="{{ url('contacto') }}"><i class="fa fa-long-arrow-right"></i>Contacto</a></li>
-                            <li><a href="{{ route('login') }}"><i class="fa fa-long-arrow-right"></i>Login</a></li>
-                        </ul>
+						<img src="/images/logouk.webp" alt="logo UkMedik">
 
                     </div>
 
@@ -36,18 +26,19 @@
 					============================================= -->
                 	<div class="footer-widget">
 
-						<h4><span>newsletter</span></h4>
+						<h4><span>Links</span></h4>
 
-						<div class="newsletter clearfix">
-
-							<i class="fa fa-envelope"></i>
-                            <p class="newsletter-text">Registrese con su correo electrónico para recibir actualizaciones de nuevos productos.</p>
-						<form name="newsletter_form" id="newsletter_form" method="post" action="submit.php" onSubmit="return false">
-                            <input type="email" name="news_email_address" id="news_email_address" placeholder="Email Address" onKeyPress="removeChecks();">
-                            <input type="submit" value="subscribe" class="btn btn-default btn-rounded" onClick="validateNewsletter();">
-                        </form>
-
-                        </div>
+						<ul class="footer-nav list-unstyled clearfix">
+                            <li><a href="{{ url('/') }}"><i class="fa fa-long-arrow-right"></i>Inicio</a></li>
+                            <li><a href="{{ url('empresa') }}"><i class="fa fa-long-arrow-right"></i>Uk Medi</a></li>
+                            <li><a href="{{ url('medicinadeportiva') }}"><i class="fa fa-long-arrow-right"></i>Medicina deportiva</a></li>
+                            <li><a href="{{ url('protesis') }}"><i class="fa fa-long-arrow-right"></i>Protesis</a></li>
+                            <li><a href="{{ url('aloinjertos') }}"><i class="fa fa-long-arrow-right"></i>Aloinjertos</a></li>
+                            <li><a href="{{ url('blog') }}"><i class="fa fa-long-arrow-right"></i>Blog</a></li>
+                            <li><a href="{{ url('shop') }}"><i class="fa fa-long-arrow-right"></i>Shop</a></li>
+                            <li><a href="{{ url('contacto') }}"><i class="fa fa-long-arrow-right"></i>Contacto</a></li>
+                            <li><a href="{{ route('login') }}"><i class="fa fa-long-arrow-right"></i>Login</a></li>
+                        </ul>
                     </div>
 
                 </div>

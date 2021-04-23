@@ -52,12 +52,13 @@
 									</div>
 
 									<div class="cart-items-detail clearfix">
-										<div class="item-counter clearfix">
+										<!-- <div class="item-counter clearfix">
 											<span id="less-item" class="pull-left">-</span>
 											<input type="text" value="0" id="total-items" class="items-total">
 											<span id="pluss-item" class="pull-right">+</span>
-										</div>
-										<a class="btn btn-default pull-left" href="{{route('add_articulo_to_cart', $articulo)}}">add to cart</a>
+										</div> -->
+										<!-- <a class="btn btn-default pull-left" href="{{route('add_articulo_to_cart', $articulo)}}">add to cart</a> -->
+										<a class="ad-to-cart btn btn-default btn-rounded" href="https://api.whatsapp.com/send?phone=584126102882&text=*UkMedik*%0D%0A*Producto:*%20{{$articulo->titulo}}%0D%0A*Código:*%20{{$articulo->codigo}}%0D%0A*Precio:*%20{{$articulo->formatted_price}}">Solicitar pedido al Whatsapp <img src="/images/tlf.webp" alt="imagen whatsapp"></a>
 									</div>
 								</div>
 							</div>
@@ -93,7 +94,7 @@
 										<h4>{{$articulo->titulo}}</h4>
 										<p>{{$articulo->subtitulo}}</p>
 										<div class="price-rating">
-										<p class="price">&pound;{{$articulo->precio}}</p>
+										<p class="price">&pound;{{$articulo->formatted_price}}</p>
 										<ul class="rating">
 											<li class="fa fa-star"></li>
 											<li class="fa fa-star"></li>
@@ -104,7 +105,7 @@
 										<div class="clearfix"></div>
 										</div>
 										<span class="sperator"></span>
-										<a href="{{route('add_articulo_to_cart', $articulo)}}" class="ad-to-cart"><i class="fa fa-shopping-cart"></i>add to cart</a>
+										<!-- <a href="{{route('add_articulo_to_cart', $articulo)}}" class="ad-to-cart"><i class="fa fa-shopping-cart"></i>add to cart</a> -->
 										
 									</div>
 								@endforeach
