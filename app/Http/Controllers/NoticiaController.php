@@ -86,11 +86,20 @@ class NoticiaController extends Controller
         //obtenemos el campo file definido en el formulario
         $foto = request()->file('foto')->store('public/'.$request->titulo);
 
-        Foto::create([
+        $img = Foto::create([
             'url' => Storage::url($foto),
             'noticia_id' => $noticia->id
         ]);
-        
+
+        // optimización de la imagen
+        $image = Image::make(Storage::get($foto))
+                        ->widen(600)
+                        // ->limitColors(255)
+                        ->encode();
+
+        // se reemplaza la imagen que subio el usuario por la imagen optimizada
+        Storage::put($img->url, (string) $image);
+
         return redirect('/noticias')->with('flash', 'Tu publicación ha sido creada');
     }
 
