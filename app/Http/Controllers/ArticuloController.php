@@ -58,7 +58,7 @@ class ArticuloController extends Controller
             'imagen' => 'image|max:2048',
         ]);
     
-        $imagen = request()->file('imagen')->store('public/'.$request->titulo);
+        $imagen = request()->file('imagen')->store('public/articulos/'.$request->titulo);
 
         $articulo = Articulo::create([
             'codigo' => $request->get('codigo'),

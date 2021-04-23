@@ -84,7 +84,7 @@ class NoticiaController extends Controller
         $noticia->etiquetas()->attach($etiquetas);
 
         //obtenemos el campo file definido en el formulario
-        $foto = request()->file('foto')->store('public/'.$request->titulo);
+        $foto = request()->file('foto')->store('public/noticias/'.$request->titulo);
 
         $img = Foto::create([
             'url' => Storage::url($foto),
