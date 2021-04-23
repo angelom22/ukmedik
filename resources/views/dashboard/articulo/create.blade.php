@@ -46,7 +46,7 @@
         </div>
         
        
-        <a href="/articulos" class="btn btn-secondary" tabindex="7">Canelar</a>
+        <a href="/articulos" class="btn btn-secondary" tabindex="7">Cancelar</a>
         <button type="submit" class="btn btn-primary" tabindex="8">Cargar</button>
     
 

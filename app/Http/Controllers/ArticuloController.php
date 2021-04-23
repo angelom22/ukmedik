@@ -58,7 +58,7 @@ class ArticuloController extends Controller
             'imagen' => 'image|max:2048',
         ]);
     
-        $imagen = request()->file('imagen')->store('public/articulos/'.$request->titulo);
+        $imagen = request()->file('imagen')->store('public/'.$request->titulo);
 
         $articulo = Articulo::create([
             'codigo' => $request->get('codigo'),
@@ -128,7 +128,7 @@ class ArticuloController extends Controller
             // Se elimina la imagen del evento actual
             Storage::delete($articulo->file);
 
-            $imagen = request()->file('imagen')->store('eventos/'.$request->title);
+            $imagen = request()->file('imagen')->store('public/'.$request->titulo);
 
             // se actualiza el evento en la base da datos
             $articulo->update([
@@ -173,14 +173,13 @@ class ArticuloController extends Controller
     public function destroy($id)
     {
         $articulo = Articulo::findOrfail($id);
-
-        $fotoRuta = str_replace('storage', 'public', $foto->url);
-
-        Storage::delete($fotoRuta);
-
+        
         $articulo->delete();
 
+        $fotoRuta = str_replace('storage', 'public', $articulo->url);
 
+        Storage::delete($fotoRuta);
+        
         return redirect('/articulos');
     }
 }

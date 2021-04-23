@@ -35,9 +35,14 @@
             <label for="precio" class="form-label">Precio</label>
             <input type="number"  class="form-control" name="precio" id="precio" step="any" value="0.00" tabindex="6" value="{{$articulo->precio}}">
         </div>
+
+        <div class="mb-3 {{$errors->has('imagen') ? 'has-error' : ''}}">
+            <input type="file" id="imagen" name="imagen" value="{{ old('imagen') }}" />
+            {!! $errors->first('imagen', '<span class="alert-danger">:message</span>') !!}			
+        </div>
         
        
-        <a href="/articulos" class="btn btn-secondary" tabindex="7">Canelar</a>
+        <a href="/articulos" class="btn btn-secondary" tabindex="7">Cancelar</a>
         <button type="submit" class="btn btn-primary" tabindex="8">Editar</button>
     
 
