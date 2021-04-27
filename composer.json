@@ -11,10 +11,12 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "intervention/image": "^2.5",
         "jeroennoten/laravel-adminlte": "^3.5",
+        "laravel/cashier": "^12.12",
         "laravel/framework": "^8.12",
         "laravel/jetstream": "^2.3",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
+        "laravel/ui": "^3.2",
         "livewire/livewire": "^2.0"
     },
     "require-dev": {

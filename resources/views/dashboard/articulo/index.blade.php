@@ -30,7 +30,7 @@
                     <td>
                         
                         <div class="col-md-4">
-                            <button class="btn btn-danger btn-sm" style="position:absolute"><i class="fa fa-remove">x</i></button>
+                            <!-- <button class="btn btn-danger btn-sm" style="position:absolute"><i class="fa fa-remove">x</i></button> -->
                             <img class="card-img-top img-responsive" src="{{url($articulo->imagen)}}" alt="">
                         </div>
                         
@@ -39,7 +39,7 @@
                     <td>{{$articulo->titulo}}</td>
                     <td>{{$articulo->descripcion}}</td>
                     <td>{{$articulo->cantidad}}</td>
-                    <td>{{$articulo->precio}}</td>
+                    <td>{{$articulo->formatted_price}}</td>
                     <td>
                         <form action="{{route('articulos.destroy', $articulo->id)}}" method="POST">
                             @csrf
