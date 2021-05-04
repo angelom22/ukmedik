@@ -66,8 +66,8 @@
                                 <option {{ collect(old('etiquetas', $noticia->etiquetas->pluck('id')))->contains($etiqueta->id) ? 'selected' : '' }} value="{{$etiqueta->id}}">{{$etiqueta->nombre}}</option>
                                 @endforeach  
                             </select>
+                        {!! $errors->first('etiquetas', '<span class="alert-danger">:message</span>') !!}
                         </div>
-                        {!! $errors->first('categoria', '<span class="alert-danger">:message</span>') !!}
 
                         <div class="mb-3">
                             <div class="dropzone">
