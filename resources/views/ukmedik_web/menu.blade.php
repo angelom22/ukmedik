@@ -22,7 +22,7 @@
 						  <span class="icon-bar"></span>
 						</button>
 
-						<a class="navbar-brand" href="index.html"><img src="/images/logouk.webp" alt="" title=""></a>
+						<a class="navbar-brand" href="index.html"><img src="{{asset('/images/logouk.webp')}}" alt="" title=""></a>
 					</div>
 
 

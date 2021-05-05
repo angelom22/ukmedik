@@ -27,12 +27,12 @@
 					<!-- Fade
 					============================================= -->
 					<li data-transition="fade" data-slotamount="10" data-thumb="">
-						<img src="{{asset('images/bg1.webp')}}" alt="image" />
+						<img src="{{asset('/images/bg1.webp')}}" alt="image" />
 						<div class="caption sft" data-x="0" data-y="180" data-speed="3000" data-start="1300" data-easing="easeOutBack">
-							<img src="{{asset('images/jeringa.webp')}}" alt="">
+							<img src="{{asset('/images/jeringa.webp')}}" alt="">
 						</div>
 						<div class="caption lfr" data-x="770" data-y="100" data-speed="1500" data-start="900" data-easing="easeOutExpo">
-							<img src="images/arthromic50mg.webp" alt=""/>
+							<img src="{{asset('/images/arthromic50mg.webp')}}" alt=""/>
 						</div>
 						<div class="caption sft big_white" data-x="0" data-y="265" data-speed="1000" data-start="1700" data-easing="easeOutExpo">
 							<strong>Arthromic</strong>
@@ -46,9 +46,9 @@
 					<!-- Slide Right
 					============================================= -->
 					<li data-transition="slidebottom" data-slotamount="20" data-thumb="">
-						<img src="images/bg2.webp" alt="image" />
+						<img src="{{asset('/images/bg2.webp')}}" alt="image" />
 						<div class="caption sft" data-x="0" data-y="180" data-speed="3000" data-start="1300" data-easing="easeOutBack">
-							<img src="images/biotechnology.webp" alt="">
+							<img src="{{asset('/images/biotechnology.webp')}}" alt="">
 						</div>
 						<div class="caption sft big_white" data-x="0" data-y="265" data-speed="1000" data-start="1700" data-easing="easeOutExpo">
 							<strong>Innovación en la Biotecnología</strong>
@@ -62,8 +62,8 @@
 					<!-- Slide Up
 					============================================= -->
 					<li data-transition="slideup" data-slotamount="15" data-thumb="">
-						<img src="images/bg3.webp" alt="image" />
-						<div class="caption sfl" data-x="0" data-y="180" data-speed="1500" data-start="1300" data-easing="easeOutBack"><img src="images/running.webp" alt=""></div>
+						<img src="{{asset('/images/bg3.webp')}}" alt="image" />
+						<div class="caption sfl" data-x="0" data-y="180" data-speed="1500" data-start="1300" data-easing="easeOutBack"><img src="{{asset('/images/running.webp')}}" alt=""></div>
 						<div class="caption sft big_white" data-x="0" data-y="265" data-speed="1500" data-start="1700" data-easing="easeOutExpo"><strong>MEDICINA DEPORTIVA</strong></div>
 						<div class="caption sfr medium_grey" data-x="0" data-y="340" data-speed="1500" data-start="2500" data-easing="easeOutExpo">Lo ayudamos a recuperar la movilidad de la articulación </div>
 						<div class="caption sfb" data-x="0" data-y="410" data-speed="300" data-start="2500" data-easing="easeOutExpo"><a href="shop.php" class="btn btn-rounded btn-bordered">Visita nuestra tienda en línea</a></div>
@@ -149,7 +149,7 @@
             	@endif
 				<div class="row">
 					<div class="col-md-6">
-						<figure><img src="images/uk.webp" alt="image" title="Appointment image" class="img-responsive lady1"></figure>
+						<figure><img src="{{asset('/images/uk.webp')}}" alt="image" title="Appointment image" class="img-responsive lady1"></figure>
 					</div>
 					<div class="col-md-6">
 						<div class="appointment-form clearfix">
@@ -178,7 +178,7 @@
 
 		<!-- TERCERA SECCION
 		============================================= -->
-		<section class="about-sec text-center" style="background-image: url(images/terceraseccion.webp); background-repeat: no-repeat; background-attachment:fixed; height: auto;">
+		<section class="about-sec text-center" style="background-image: url(/images/terceraseccion.webp); background-repeat: no-repeat; background-attachment:fixed; height: auto;">
 			<div class="container">
 				<h1>UK MEDI</h1>
 				<p class="lead">Siempre estamos avanzando en materia de medicina y biotecnología.</p>
@@ -220,37 +220,37 @@
 			<section class="services-sec container">
 
 				<div class="service-box one">
-					<span class="icon img-circle"><img src="images/medicinaa.webp"></span>
+					<span class="icon img-circle"><img src="{{asset('/images/medicinaa.webp')}}"></span>
 					<h4><a href="#.">MEDICINA</a></h4>
 					<p>Servicios de medicina deportiva y estética.</p>
 				</div>
 
 				<div class="service-box two">
-					<span class="icon img-circle"><img src="images/innovation.webp"></span>
+					<span class="icon img-circle"><img src="{{asset('images/innovation.webp')}}"></span>
 					<h4><a href="#.">INNOVACIÓN</a></h4>
 					<p>En UKMEDI siempre estamos innovando en nuevas tecnologías.</p>
 				</div>
 
 				<div class="service-box three">
-					<span class="icon img-circle"><img src="images/biotec.webp"></span>
+					<span class="icon img-circle"><img src="{{asset('/images/biotec.webp')}}"></span>
 					<h4><a href="#.">BIOTECNOLOGÍA</a></h4>
 					<p>El progreso científico en biotecnología celular y molecular ha conducido al desarrollo de terapias avanzadas.</p>
 				</div>
 
 				<div class="service-box four">
-					<span class="icon img-circle"><img src="images/device.webp"></span>
+					<span class="icon img-circle"><img src="{{asset('/images/device.webp')}}"></span>
 					<h4><a href="#.">DISPOSITIVO</a></h4>
 					<p>Contamos con dispositivos de alta tecnología de fijación LCA.</p>
 				</div>
 
 				<div class="service-box four">
-					<span class="icon img-circle"><img src="images/experiencia.webp"></span>
+					<span class="icon img-circle"><img src="{{asset('/images/experiencia.webp')}}"></span>
 					<h4><a href="#.">EXPERIENCIA</a></h4>
 					<p>Siempre estamos llevando nuevos avances de la medicina, con más de 20 años de trayectoria.</p>
 				</div>
 
 				<div class="service-box four">
-					<span class="icon img-circle"><img src="images/aloinjertos.webp"></span>
+					<span class="icon img-circle"><img src="{{asset('/images/aloinjertos.webp')}}"></span>
 					<h4><a href="#.">ALOINJERTOS</a></h4>
 					<p>Aloinjertos en medicina deportiva, neuro espinal, oral y maxilofacial, ortopedia general y osteoarticular.</p>
 				</div>
@@ -262,11 +262,11 @@
 
 		<!-- QUINTA SECCION
 		============================================= -->
-		<section class="about-sec text-center" style="background-image: url(images/terceraseccion.webp); background-repeat: no-repeat; background-attachment:fixed; height: auto;">
+		<section class="about-sec text-center" style="background-image: url(/images/terceraseccion.webp); background-repeat: no-repeat; background-attachment:fixed; height: auto;">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-5">
-						<img src="images/ig.webp" class="app-img" alt="" title="">
+						<img src="{{asset('/images/ig.webp')}}" class="app-img" alt="" title="">
 					</div>
 					<div class="col-md-7">
 						<div class="medicom-app-content">
@@ -275,8 +275,8 @@
 							<span>Follow</span>
 							</p>
 							<ul class="list-unstyled app-buttons text-center">
-								<li><a href="https://www.facebook.com/ukmedi"><img src="images/fb.webp" alt="" title="Facebook Uk Medi"></a></li>
-								<li><a href="https://www.instagram.com/ukmedi"><img src="images/iconoig.webp" alt="" title="Instagram Uk Medi"></a></li>
+								<li><a href="https://www.facebook.com/ukmedi"><img src="{{asset('/images/fb.webp')}}" alt="" title="Facebook Uk Medi"></a></li>
+								<li><a href="https://www.instagram.com/ukmedi"><img src="{{asset('/images/iconoig.webp')}}" alt="" title="Instagram Uk Medi"></a></li>
 							</ul>
 							</div>
 					</div>
@@ -299,22 +299,22 @@
 							<div id="our-clinic" class="slider-mini owl-carousel">
 
 								<div class="item">
-									<img src="images/op1.webp" alt="" title="">
+									<img src="{{asset('/images/op1.webp')}}" alt="" title="">
 									<h4>@UKMEDI</h4>
 								</div>
 
 								<div class="item">
-									<img src="images/op2.webp" alt="" title="">
+									<img src="{{asset('/images/op2.webp')}}" alt="" title="">
 									<h4>@UKMEDI</h4>
 								</div>
 
 								<div class="item">
-									<img src="images/op3.webp" alt="" title="">
+									<img src="{{asset('/images/op3.webp')}}" alt="" title="">
 									<h4>@UKMEDI</h4>
 								</div>
 
 								<div class="item">
-									<img src="images/op4.webp" alt="" title="">
+									<img src="{{asset('/images/op4.webp')}}" alt="" title="">
 									<h4>@UKMEDI</h4>
 								</div>
 
